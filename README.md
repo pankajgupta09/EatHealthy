@@ -8,21 +8,6 @@ A comprehensive web application built with the MERN stack (MongoDB, Express.js, 
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
 </p>
 
-
-## 🌐 Live Demo & Deployment
-- **Demo Video**: [Watch on YouTube](https://www.youtube.com/watch?v=_jXpvho58wg)
-- **Deployed Application**: [EatWellthy](https://eatwellthy.onrender.com)
-- This deployed application may be inactive periodically
-- It is highly recommended to clone this repository and use localhost
-
-## 👥 Team Members
-- [LIU XIAOTAO](https://github.com/Neurotic58)
-- [LOW JO YI, NICOLE](https://github.com/Nicoleelow)
-- [MAHI PANDEY](https://github.com/mahipandcy)
-- [MEHTA RISHIKA](https://github.com/Oganesson0221)
-- [ZHANG YICHI](https://github.com/CatilonyZhang)
-- [ZHAO QIXIAN](https://github.com/ZhaoQixian)
-
 ## ✨ Core Features
 ### 🍽️ Smart Meal Planning
 - Comprehensive nutritional information from reliable Nutritionix API
@@ -174,11 +159,7 @@ Here are the documentation resources used in this project:
   API Library – APIs & Services – Google Cloud console. (n.d.).
 - [OpenAI API Documentation](https://platform.openai.com/docs/api-reference/introduction)  
   OpenAI Platform. (n.d.).
-- [IEEE Software Engineering Standards](https://innovate.ieee.org/ieee-software-engineering-standards/)  
-  Ieeeinnovate. (2019, December 9). Innovate.
-- [Good Practices for Educational Software Engineering Projects](https://ieeexplore.ieee.org/document/4222631)  
-  IEEE Conference Publication | IEEE Xplore. (n.d.).
-- **Nanyang Technological University, Singapore** - SC2006 Software Engineering, Lecture Notes
+
 
 
 
