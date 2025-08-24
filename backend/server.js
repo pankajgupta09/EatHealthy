@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 5050;
 const isProduction = process.env.NODE_ENV === "production";
 
 // Define frontend URL based on environment
-const FRONTEND_URL = isProduction 
+const FRONTEND_URL = isProduction
   ? "https://eatwellthy.onrender.com"
   : "http://localhost:3000";
 
@@ -52,9 +52,9 @@ app.use(express.json());
 
 // CORS options with support for both development and production
 const corsOptions = {
-  origin: isProduction 
-    ? ["https://eatwellthy.onrender.com"]
-    : ["http://localhost:3000", "https://eatwellthy.onrender.com"],
+  origin: isProduction
+    ? ["https://eatwelthy.onrender.com"]
+    : ["http://localhost:3000", "https://eatwelthy.onrender.com"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 204,
