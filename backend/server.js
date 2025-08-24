@@ -53,8 +53,8 @@ app.use(express.json());
 // CORS options with support for both development and production
 const corsOptions = {
   origin: isProduction
-    ? ["https://eatwelthy.onrender.com"]
-    : ["http://localhost:3000", "https://eatwelthy.onrender.com"],
+    ? ["https://eat-welthy.vercel.app/"]
+    : ["http://localhost:3000", "https://eat-welthy.vercel.app/"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 204,
