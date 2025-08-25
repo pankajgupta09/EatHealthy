@@ -24,9 +24,8 @@ const PORT = process.env.PORT || 5050;
 const isProduction = process.env.NODE_ENV === "production";
 
 // Define frontend URL based on environment
-const FRONTEND_URL = isProduction
-  ? "https://eatwellthy.onrender.com"
-  : "http://localhost:3000";
+const FRONTEND_URL = "https://eat-welthy.vercel.app/";
+
 
 const app = express();
 
@@ -35,8 +34,8 @@ app.use(
     name: "session",
     maxAge: 24 * 60 * 60 * 1000,
     keys: [process.env.COOKIE_KEY_1, process.env.COOKIE_KEY_2],
-    sameSite: isProduction ? 'none' : 'lax',
-    secure: isProduction
+    sameSite: isProduction ? "none" : "lax",
+    secure: isProduction,
   })
 );
 
@@ -50,18 +49,13 @@ app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// CORS options with support for both development and production
-const corsOptions = {
-  origin: isProduction
-    ? ["https://eat-welthy.vercel.app/"]
-    : ["http://localhost:3000", "https://eat-welthy.vercel.app/"],
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
-  optionsSuccessStatus: 204,
-};
-
-// Use CORS
-app.use(cors(corsOptions));
+// ✅ Corrected CORS setup
+app.use(
+  cors({
+    origin: FRONTEND_URL,
+    credentials: true,
+  })
+);
 
 // Routes
 app.get("/", (req, res) => {
@@ -71,7 +65,7 @@ app.get("/", (req, res) => {
 app.use("/users/google", googleAuth);
 app.use("/users", auth);
 app.use("/location", locationRouter);
-app.use("/nutrition/", nutrition);
+app.use("/nutrition", nutrition);
 app.use("/api/scrape", scrapeRoutes);
 app.use("/welloh", wellohRountes);
 app.use("/api/profile", require("./routes/profile"));
@@ -104,5 +98,5 @@ if (isProduction) {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Frontend URL: ${FRONTEND_URL}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`Environment: ${process.env.NODE_ENV || "development"}`);
 });
